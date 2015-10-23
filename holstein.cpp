@@ -1,3 +1,6 @@
+//bitwise
+
+
 /*
 ID: jezhao11
 LANG: C++11
