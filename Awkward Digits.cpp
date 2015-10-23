@@ -1,3 +1,5 @@
+//base conversion, storing digits as char
+
 #include <bits/stdc++.h>
 using namespace std;
 int convertFromBaseN(char *s, int n){
