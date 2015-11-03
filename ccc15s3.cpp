@@ -11,8 +11,12 @@ int main()
     while (ans < P){
         int p;
         cin >> p;
+        //gates.upper_bound(p) returns the least value in gates that is greater than p
+        //if that upper_bound(p) is where the set begins
+        //there are no spots that can be parked (no spots less than or equal to p)
         if (gates.upper_bound(p)==gates.begin()) break; //if there are no spots greater than p, no more available spots
-        gates.erase(--gates.upper_bound(p)); //remove the greatest possible spot for p
+        cout<<*gates.upper_bound(p)<<endl;
+        gates.erase(--gates.upper_bound(p)); //remove the greatest integer in the set that is less than the upper_bound(p)
         ans++;
     }
     cout << ans;
