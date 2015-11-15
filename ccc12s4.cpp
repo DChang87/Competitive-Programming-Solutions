@@ -1,5 +1,4 @@
 //BFS, hashing
-
 #include<bits/stdc++.h>
 using namespace std;
 set<int> visited;
@@ -58,6 +57,7 @@ int bfs(int hashCode)
 
 int main()
 {
+    cin.sync_with_stdio(0);cin.tie(0);
     cin>>N;
     while (N!=0){
         visited.clear();
@@ -77,6 +77,7 @@ int main()
         else{
             cout<<"IMPOSSIBLE"<<endl;
         }
+        cin>>N;
     }
     return 0;
 }
