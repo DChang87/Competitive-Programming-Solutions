@@ -50,8 +50,8 @@ int main()
     long long q;
     for (int i=0;i<Q;i++){
         cin>>q;
-        int p = upper_bound(shortest, shortest+cnt, q) - shortest - 1;
-        printf("%d\n",p+1);
+        int p = upper_bound(shortest, shortest+cnt, q) - shortest ;
+        printf("%d\n",p);
 
     }
     return 0;
