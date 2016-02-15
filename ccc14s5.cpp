@@ -1,5 +1,11 @@
 //DP, sorting
 
+//fox can visit as many places as needed
+//cannot visit consecutive places
+//The distance your Fox is willing to travel after each treat will strictly decrease
+//The first line contains the integer N (1 ≤ N ≤ 2000). 
+//The next N lines each contain Xi, followed by a space, followed by Yi, for i = 1..N (−10 000 ≤ Xi, Yi ≤ 10 000) 
+//representing the coordinates of the i-th location.
 
 //create every possible distance between pairs
 //sort it (along with the two points in the pair
