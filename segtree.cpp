@@ -3,7 +3,6 @@
 //indicating that your program is to find the minimum value of the elements in the index range [i, j] (that is, inclusive) 
 //in the current state of the array and print this value to standard output.
 
-/*
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -68,5 +67,3 @@ int main()
         }
     }
 }
-
-*/
