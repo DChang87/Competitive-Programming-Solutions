@@ -1,7 +1,8 @@
 /*
-You may have heard that no two snowflakes are alike. Your task is to write a program to determine whether this is really true. Your program will read information about a collection of snowflakes, and search for a pair that may be identical.
-
-Each snowflake has six arms. For each snowflake, your program will be provided with a measurement of the length of each of the six arms. Any pair of snowflakes which have the same lengths of corresponding arms should be flagged by your program as possibly identical.
+You may have heard that no two snowflakes are alike. Your task is to write a program to determine whether this is really true. 
+Your program will read information about a collection of snowflakes, and search for a pair that may be identical. Each snowflake 
+has six arms. For each snowflake, your program will be provided with a measurement of the length of each of the six arms. Any pair 
+of snowflakes which have the same lengths of corresponding arms should be flagged by your program as possibly identical.
 */
 #include<bits/stdc++.h>
 using namespace std;
