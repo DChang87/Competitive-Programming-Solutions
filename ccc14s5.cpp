@@ -1,13 +1,11 @@
 //DP, sorting
-
 //fox can visit as many places as needed
 //cannot visit consecutive places
 //The distance your Fox is willing to travel after each treat will strictly decrease
 //The first line contains the integer N (1 ≤ N ≤ 2000). 
 //The next N lines each contain Xi, followed by a space, followed by Yi, for i = 1..N (−10 000 ≤ Xi, Yi ≤ 10 000) 
 //representing the coordinates of the i-th location.
-
-//create every possible distance between pairs
+//////////////////////////////////create every possible distance between pairs
 //sort it (along with the two points in the pair
 //go through each pair, checking with the two points (and the distances required previous to travel to the two points
 //since the pairs vector is already sorted, just have to check if the distances are equivalent
@@ -22,28 +20,19 @@ only store the best of the current best[a] or the # of treats traveling from poi
 this really only stores the best number of treats you can get going through 0 (and you must)
 add 1 at the end because the end point wasn't couted for treats? (????)
 */
-                                                
-
 #include<bits/stdc++.h>
 using namespace std;
-int N;
-int coords[2010][2];
+int N; int coords[2010][2]; 
 int best[2010][3]; //best, best@point, bestdistance
 vector<pair<int,pair<int,int>>> pairs;
 int dp[2010];
-int dist(int x1,int y1, int x2, int y2)
-{
-    return pow(x1-x2,2)+pow(y1-y2,2);
-}
+int dist(int x1,int y1, int x2, int y2) return pow(x1-x2,2)+pow(y1-y2,2);}
 int main()
 {
     cin.sync_with_stdio(0); cin.tie(0);
     cin>>N;
-    coords[0][0]=0;
-    coords[0][1]=0;
-    for (int i=1;i<=N;i++){
-        cin>>coords[i][0]>>coords[i][1];
-    }
+    coords[0][0]=0; coords[0][1]=0;
+    for (int i=1;i<=N;i++) cin>>coords[i][0]>>coords[i][1];
     for (int i=0;i<=N;i++){
         for (int j=i+1;j<=N;j++){
             pairs.push_back(make_pair(dist(coords[i][0],coords[i][1],coords[j][0],coords[j][1]),make_pair(i,j)));
@@ -52,9 +41,7 @@ int main()
     sort(pairs.begin(),pairs.end());
     int d,a,b;
     for (int i=0;i<pairs.size();i++){
-        d = pairs[i].first;
-        a = pairs[i].second.first;
-        b = pairs[i].second.second;
+        d = pairs[i].first; a = pairs[i].second.first; b = pairs[i].second.second;
         if (d!=best[a][2]) //if d is greater than the distance already accounted previously to A
         {
             best[a][1] = best[a][0]; //temporary best at point A can be equated as the current best at A
