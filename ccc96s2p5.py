@@ -1,11 +1,12 @@
+"""Iterating through a graph with node names as strings""""
 n,m = input().split()
-n = int(n)
-m = int(m)
+n = int(n) # roads
+m = int(m) #queries
 cities = {}
 invCities = {}
 connections = []
 for i in range(n):
-    a,b = input().split()
+    a,b = input().split() #city names given in strings
     if a not in cities:
         cities[a]=len(cities)
         invCities[len(cities)-1]=a
