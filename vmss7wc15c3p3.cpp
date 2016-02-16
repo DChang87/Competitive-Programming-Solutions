@@ -1,3 +1,17 @@
+/*
+N restaurants in his distribution chain, which are arranged along a highway at distinct positions.
+Each restaurant has a position on the highway, pi, which represents its distance from position 0 and a value fi (fi ∈{0,1}). 
+If fi =1, the restaurant is said to be fringy. Otherwise it is regular. In addition to the N restaurants, 
+Gus has a math lab at position 0 on the highway.
+Gus wants to send a truck from his math lab at position 0 to the last restaurant in his distribution chain. 
+The truck has a fuel capacity F and can only travel a distance of F before it must stop at a restaurant and 
+refuel (assume the truck starts with a full tank of fuel at the beginning). The driver also has the choice to 
+simply drive by a restaurant. However, the truck must stop at all fringy restaurants so the driver can do math. 
+Fring also wants the truck to stop at at most KK restaurants (including the last restaurant, but not including the 
+math lab) in order to increase the efficiency of his distribution network.
+Help Fring calculate the minimum fuel capacity the truck needs so that it will be able to reach the last restaurant 
+while stopping at most K times.
+*/
 #include<iostream>
 using namespace std;
 long long n,kval;
