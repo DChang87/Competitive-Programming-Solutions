@@ -1,3 +1,4 @@
+#nukit
 n = int(input())
 states = []
 for zz in range(35):
@@ -28,14 +29,12 @@ def move(state):
                 break
     states[state[0]][state[1]][state[2]][state[3]]=flag;
     return flag;
-
 for i in range(n):
     A,B,C,D = input().split()
     A = int(A)
     B = int(B)
     C = int(C)
     D = int(D)
-    
     if move([A,B,C,D]): 
         print("Patrick")
     else:
