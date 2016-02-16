@@ -1,7 +1,17 @@
 //rounding, mergeSort
-
+/*
+Pinball is an arcade game in which an individual player controls a silver ball by means of flippers, with the 
+objective of accumulating as many points as possible. At the end of each game, the player's score and rank are displayed. 
+The score, an integer between 0 and 1 000 000 000, is that achieved by the player in the game just ended. The rank is displayed 
+as "r of n". n is the total number of games ever played on the machine, and r is the position of the score for the just-ended 
+game within this set.
+More precisely, r is one greater than the number of games whose score exceeds that of the game just ended.
+Input
+You are to implement the pinball machine's ranking algorithm. The first line of input contains a positive integer, t, 
+the total number of games played in the lifetime of the machine. t lines follow, given the scores of these games, in 
+chronological order.
+*/
 #include <bits/stdc++.h>
-
 using namespace std;
 double total=0;
 int pins[100001],newPins[100001];
@@ -48,14 +58,10 @@ void mergeSort(int left,int right)
         merge(left,mid,right);
     }
 }
-
 int main()
 {
-
     cin>>N;
-    for (int i=0;i<N;i++){
-        cin>>pins[i];
-    }
+    for (int i=0;i<N;i++) cin>>pins[i];
     mergeSort(0,N-1);
     printf("%.2f", double(total + N) / N);
 }
