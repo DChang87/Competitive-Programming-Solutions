@@ -1,6 +1,4 @@
-/*
-print the longest path between any two nodes in the tree.
-*/
+/*print the longest path between any two nodes in the tree.*/
 #include<bits/stdc++.h>
 using namespace std;
 int N,a,b;
