@@ -1,4 +1,9 @@
 //maps, vectors, pointers
+/*In this problem, you will write a program to find the minimal solution to a set of set inequalities.
+A set inequality has the format             X contains S
+where X may be any set name and S may be a set name or set element. If S is a set name the inequality means 
+that X is a superset or equal to S. If S is an element the inequality means that X contains S. Sets are named A-Z 
+and contain elements from a-z.*/
 #include<iostream>
 #include<map>
 #include<vector>
@@ -17,7 +22,6 @@ int main()
         if (storage.find(instr[i][0])==storage.end()){
             storage[instr[i][0]];
         }
-        //65-90
     }
     for (int i=0;i<N;i++){
         for (int j=0;j<N;j++){
@@ -27,16 +31,12 @@ int main()
                     if (find(storage[instr[j][0]].begin(),storage[instr[j][0]].end(),storage[instr[j][1]][k])==storage[instr[j][0]].end()){
                         storage[instr[j][0]].push_back(storage[instr[j][1]][k]);
                     }
-                    //storage[instr[j][0]].push_back(storage[instr[j][1]][k]);
-
                 }
             }
             else{
                 if (find(storage[instr[j][0]].begin(),storage[instr[j][0]].end(),instr[j][1])==storage[instr[j][0]].end()){
                     storage[instr[j][0]].push_back(instr[j][1]);
                 }
-                //storage[instr[j][0]].push_back(instr[j][1]);
-
             }
         }
     }
@@ -53,5 +53,4 @@ int main()
         }
         cout<<"}"<<endl;
     }
-
 }
