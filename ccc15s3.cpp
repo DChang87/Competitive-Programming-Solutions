@@ -1,4 +1,10 @@
-//clever use of sets
+/*
+The airport has G gates, numbered from 1 to G.
+P planes arrive at the airport, one after another. You are to assign the i-th plane to permanently dock at any 
+gate 1, …, gi (1 ≤ gi ≤ G), at which no previous plane has docked. As soon as a plane cannot dock at any gate, 
+the airport is shut down and no future planes are allowed to arrive.
+you would like to maximize the number of planes starting from the beginning that can all dock at different gates.
+*/
 #include <bits/stdc++.h>
 using namespace std;
 int main()
