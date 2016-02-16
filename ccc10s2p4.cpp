@@ -1,9 +1,21 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
-#include<cstdio>
+/*
+After considering to buy a brand new Atari or Commodore computer (based on your extensive research in late February), 
+you decide to get the best value for your dollar by building your own.
+The computer that you are going to build is composed of T (1 ≤ T ≤ 5) different types of components. Your computer 
+must have exactly one of each type of component.
+Each component has an integer cost ci (1 ≤ ci ≤ 3000), an integer value vi (1 ≤ vi ≤ 3000), and type ti (1 ≤ ti ≤ T).
+Your on-line computer parts store has N different components (1 ≤ N ≤ 1000) that you can select from.
+For a given budget B (1 ≤ B ≤ 3000), maximize the total value of the components in your computer.
+If you cannot construct such a computer, you should print -1.
+Input
+The first line contains T, the number of types of components your computer requires. The next line contains the number N, 
+followed by N lines of three integers, representing ci, vi, and ti, each separated by one space. The last line of input is 
+the budget B.
+Output
+Output the value of the maximum valued computer you can create which costs at most B, or -1 if you cannot construct a computer.
+*/
+#include<bits/stdc++.h>
 using namespace std;
-
 int T,N,B,c,v,t,dp[3005][6];
 vector<pair<int, int>> types[6];
 int main()
@@ -24,6 +36,5 @@ int main()
             }
         }
     }
-    cout << dp[B][T];
-	return 0;
+    cout << dp[B][T]; return 0;
 }
