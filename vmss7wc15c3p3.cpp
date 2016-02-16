@@ -34,31 +34,21 @@ bool checkValid(long long p[],long long f[],int fuel, int k)
         }
     }
     k--;
-    if (k<0){
-        return false;
-    }
+    if (k<0)return false;
     return true;
 }
 int main()
 {
     cin>>n>>kval;
-    long long p[n+1],f[n+1];
-    long long P,F;
-    //long long optimal=p[n-1];
+    long long p[n+1],f[n+1], P,F;
     long long fringes=0;
-    p[0]=0;
-    f[0]=0;
+    p[0]=0; f[0]=0;
     bool fringy=false;
     for (long long i=0;i<n;i++){
         cin>>P>>F;
-        if (F==1 || i==n-1){
-            fringes++;
-        }
-        p[i+1]=P;
-        f[i+1]=F;
-        if (fringes>kval){
-            fringy=true;
-        }
+        if (F==1 || i==n-1){ fringes++;}
+        p[i+1]=P;  f[i+1]=F;
+        if (fringes>kval) fringy=true;
     }
     if (fringy){
         cout<<"DEA Bust!"<<endl;
@@ -68,13 +58,8 @@ int main()
     int cfuel=p[n-1];
     while (minbound<maxbound){
         cfuel = minbound +(maxbound-minbound)/2;
-        if (checkValid(p,f,cfuel,kval)){
-            maxbound=cfuel;
-        }
-        else{
-            minbound=cfuel+1;
-        }
-
+        if (checkValid(p,f,cfuel,kval)) maxbound=cfuel;
+        else minbound=cfuel+1;
     }
     cfuel = minbound +(maxbound-minbound)/2;
     cout<<cfuel<<endl;
