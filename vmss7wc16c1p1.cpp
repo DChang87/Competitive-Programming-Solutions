@@ -1,18 +1,14 @@
+//On every line and in increasing order, print a prime factor of YY.
 #include<bits/stdc++.h>
 using namespace std;
 int N;
-
 int main()
 {
     cin.sync_with_stdio(0); cin.tie(0);
     cin>>N;
     int root = sqrt(N)+1;
-
-    bool prime[root+10];
-    bool visited[root+10];
-
-    memset(prime,false,sizeof prime);
-    memset(visited, false, sizeof visited);
+    bool prime[root+10]; bool visited[root+10];
+    memset(prime,false,sizeof prime);  memset(visited, false, sizeof visited);
     for (int i=2;i<=root;i++){
         if (visited[i]) continue;
         int n = i;
@@ -22,7 +18,6 @@ int main()
             n+=i;
         }
     }
-
     int counter=2;
     bool out = false;
     while(counter<=root){
@@ -32,18 +27,11 @@ int main()
                 out=true;
                 cout<<counter<<endl;
             }
-            else{
-                counter++;
-            }
+            else{ counter++;}
         }
-        else{
-            counter++;
-        }
+        else{ counter++;}
     }
-    if (N!=1){
-        cout<<N<<endl;
-    }
-
+    if (N!=1){cout<<N<<endl;}
     return 0;
 }
 
